@@ -23,6 +23,8 @@
   .sticky-footer .sticky__message {
     text-align: left;
     padding: 30px; }
+    .sticky-footer .sticky__message h2 {
+      margin-top: 0; }
   .sticky-footer .sticky--close {
     position: absolute;
     top: 1.5rem;

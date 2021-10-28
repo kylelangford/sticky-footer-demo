@@ -30,6 +30,10 @@
 	.sticky__message {
 		text-align: left;
 		padding: 30px;
+
+		h2 {
+			margin-top: 0;
+		}
 	}
 
 	.sticky--close {

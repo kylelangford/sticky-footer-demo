@@ -21,7 +21,7 @@ const sticky = function(element) {
 
     // Debug 
     if (sessionStorage.getItem('sticky-footer')) {
-      console.log('Already opened, clear network data.');
+      console.log('Sticky footer shown once, clear browser session.');
     }
 
     /* Test for sesssion variable
@@ -30,6 +30,8 @@ const sticky = function(element) {
 
       // Set Timer Delay
       setTimeout(function() {
+
+        console.log('Show Sticky Footer'); // Debug
 
         // Get height of sticky footer
         var height = sticky.element.offsetHeight;
@@ -40,15 +42,15 @@ const sticky = function(element) {
         /* This will add margin matching the height to the sticky container 
            to the bottom of the page. This will prevent the sticky footer from covering
            any footer element. (Optional)  */
-        document.querySelector('body').style.marginBottom = height;
-
-        console.log('open');
+        document.querySelector('body').style.marginBottom = height + 'px';
 
       }, sticky.delay);
     }
   }
 
   function close(sticky) {
+
+    console.log('Hide Sticky Footer'); // Debug
 
     sticky.element.classList.remove(sticky.activeClass);
     sessionStorage.setItem('sticky-footer', '1'); // Session Storage
